@@ -1,4 +1,3 @@
-from colcon_core.dependency_descriptor import DependencyDescriptor
 from colcon_core.logging import colcon_logger
 from colcon_core.package_augmentation \
     import PackageAugmentationExtensionPoint
