@@ -38,9 +38,9 @@ class NarhashRepositoryAugmentation(RepositoryAugmentationExtensionPoint):
             RepositoryAugmentationExtensionPoint.EXTENSION_POINT_VERSION,
             '^1.0')
 
-    def augment_repository(self, path, metadata, **kwargs):
-        if 'narhash' not in metadata:
-            metadata['narhash'] = _path_hash(path)
+    def augment_repository(self, desc, **kwargs):
+        if 'narhash' not in desc.metadata:
+            desc.metadata['narhash'] = _path_hash(desc.path)
 
 
 def _path_hash(path):
